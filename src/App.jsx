@@ -1,10 +1,31 @@
+import { useState } from 'react'
 import './App.css'
 import terroristsData from './data/terrorists.json'
 
 const STATUS_OPTIONS = ['All', 'Active', 'Quiet', 'Dead', 'Israeli Agent']
 
+const RAW_STATUS_TO_LABEL = {
+  active: 'Active',
+  quiet: 'Quiet',
+  dead: 'Dead',
+  agent: 'Israeli Agent',
+}
+
 const DEFAULT_IMAGE =
   'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400'
+
+function normalizeTerrorist(raw, index) {
+  const rawStatus = (raw.status || '').toLowerCase()
+  return {
+    id: index + 1,
+    name: raw.name,
+    organization: raw.organization,
+    attackCount: raw.attacksCount ?? 0,
+    status: RAW_STATUS_TO_LABEL[rawStatus] ?? raw.status ?? 'Unknown',
+    relationToIsrael: raw.relationToIsraelSummary ?? '',
+    imageUrl: raw.imageUrl || '',
+  }
+}
 
 function findMostDangerous(terrorists) {
   // Dangerous = Active, has image, and higher attack count
@@ -18,12 +39,17 @@ function findMostDangerous(terrorists) {
 }
 
 function App() {
-  const [terrorists, setTerrorists] = useState(terroristsData)
+  const [terrorists, setTerrorists] = useState(() =>
+    terroristsData.map((t, idx) => normalizeTerrorist(t, idx))
+  )
   const [nameQuery, setNameQuery] = useState('')
   const [minAttacks, setMinAttacks] = useState('')
   const [statusFilter, setStatusFilter] = useState('All')
   const [selected, setSelected] = useState(null)
   const [selectedWeapon, setSelectedWeapon] = useState('')
+
+  // Dont remove this "dataSort"!!! - it is needed for the initial sort אחרת יש באג
+  const [dataSort, _setDataSort] = useState('no-sort');
 
   const handleStatusChange = (id, newStatus) => {
     setTerrorists((prev) =>
@@ -49,6 +75,7 @@ function App() {
   })
 
   const mostDangerous = findMostDangerous(terrorists)
+  console.log(dataSort);
 
   return (
     <div className="app">

@@ -1,56 +1,316 @@
 [
   {
-    "id": 1,
-    "name": "Abu Ghost",
-    "organization": "Shadow Brigade",
-    "attackCount": 18,
-    "status": "Active",
-    "relationToIsrael": "Planned multiple rocket attacks on Israeli border towns.",
-    "imageUrl": "https://images.pexels.com/photos/1487951/pexels-photo-1487951.jpeg"
+    "name": "Walid Shami",
+    "organization": "Black Cedar Brigade",
+    "attacksCount": 24,
+    "status": "active",
+    "relationToIsraelSummary": "Operational commander with a history of high-impact planning.",
+    "imageUrl": "https://ibb.co/G34rhHHx"
   },
   {
-    "id": 2,
-    "name": "Layla Night",
-    "organization": "Desert Hawks",
-    "attackCount": 3,
-    "status": "Quiet",
-    "relationToIsrael": "Involved in logistics for attacks in the past, currently under observation.",
-    "imageUrl": ""
+    "name": "Bassam Taha",
+    "organization": "Northern Fuse",
+    "attacksCount": 3,
+    "status": "quiet",
+    "relationToIsraelSummary": "Minor role; limited activity and no known direct operational planning.",
+    "imageUrl": null
   },
   {
-    "id": 3,
-    "name": "Red Falcon",
-    "organization": "Red Falcon Cell",
-    "attackCount": 25,
-    "status": "Active",
-    "relationToIsrael": "Responsible for major coordinated attacks on Israeli infrastructure.",
-    "imageUrl": "https://images.pexels.com/photos/838413/pexels-photo-838413.jpeg"
+    "name": "Samir Al-Hadi",
+    "organization": "Iron Horizon Cell",
+    "attacksCount": 6,
+    "status": "quiet",
+    "relationToIsraelSummary": "Previously involved in logistics; currently low visibility and avoids direct contact.",
+    "imageUrl": "https://ibb.co/ds2gZVp9"
   },
   {
-    "id": 4,
-    "name": "Silent Wave",
-    "organization": "Coastal Front",
-    "attackCount": 0,
-    "status": "Israeli Agent",
-    "relationToIsrael": "Turned and currently provides intelligence to Israel.",
-    "imageUrl": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
+    "name": "Odeh Kanaan",
+    "organization": "Sunset Route",
+    "attacksCount": 2,
+    "status": "agent",
+    "relationToIsraelSummary": "Low-level infiltration; reports sporadically to protect cover.",
+    "imageUrl": null
   },
   {
-    "id": 5,
-    "name": "Old Lion",
-    "organization": "Mountain Wolves",
-    "attackCount": 12,
-    "status": "Dead",
-    "relationToIsrael": "Former leader, neutralized in an IDF operation.",
-    "imageUrl": ""
+    "name": "Riad Alwan",
+    "organization": "Shadow Orchard",
+    "attacksCount": 13,
+    "status": "active",
+    "relationToIsraelSummary": "Runs communications and coordinates regional contacts.",
+    "imageUrl": "https://ibb.co/5xFPqbXB"
   },
   {
-    "id": 6,
-    "name": "Desert Fox",
-    "organization": "Desert Hawks",
-    "attackCount": 2,
-    "status": "Quiet",
-    "relationToIsrael": "Participated in small arms smuggling; inactive recently.",
-    "imageUrl": "https://images.pexels.com/photos/2955376/pexels-photo-2955376.jpeg"
+    "name": "Majed Al-Khalil",
+    "organization": "Sunset Route",
+    "attacksCount": 1,
+    "status": "quiet",
+    "relationToIsraelSummary": "Low-risk associate; mostly involved in transportation and storage.",
+    "imageUrl": "https://ibb.co/yBkwC3PJ"
+  },
+  {
+    "name": "Imad Najjar",
+    "organization": "Crimson Dune",
+    "attacksCount": 30,
+    "status": "active",
+    "relationToIsraelSummary": "High-profile operator; directs multiple cells and prioritizes escalation.",
+    "imageUrl": "https://ibb.co/VWNLND5F"
+  },
+  {
+    "name": "Tamer Al-Ali",
+    "organization": "Stone River Syndicate",
+    "attacksCount": 5,
+    "status": "quiet",
+    "relationToIsraelSummary": "Supports supply movement and keeps communications minimal.",
+    "imageUrl": null
+  },
+  {
+    "name": "Hatem Nusseibeh",
+    "organization": "East Gate Collective",
+    "attacksCount": 10,
+    "status": "quiet",
+    "relationToIsraelSummary": "Former organizer; currently inactive but still respected by peers.",
+    "imageUrl": "https://ibb.co/B2DCjB4X"
+  },
+  {
+    "name": "Aziz Halabi",
+    "organization": "Crimson Dune",
+    "attacksCount": 28,
+    "status": "active",
+    "relationToIsraelSummary": "High-intensity operator; prioritizes operations and public threats.",
+    "imageUrl": "https://ibb.co/yBB0hX6Z"
+  },
+  {
+    "name": "Nasser Odeh",
+    "organization": "Northern Fuse",
+    "attacksCount": 8,
+    "status": "quiet",
+    "relationToIsraelSummary": "Suspended activity; maintains influence through family and local ties.",
+    "imageUrl": "https://ibb.co/2YgDvZJG"
+  },
+  {
+    "name": "Hani Shreif",
+    "organization": "Black Cedar Brigade",
+    "attacksCount": 9,
+    "status": "dead",
+    "relationToIsraelSummary": "Former local coordinator; confirmed dead and no longer relevant operationally.",
+    "imageUrl": null
+  },
+  {
+    "name": "Kareem Nassar",
+    "organization": "Red Crescent Front",
+    "attacksCount": 14,
+    "status": "active",
+    "relationToIsraelSummary": "Spreads hostile propaganda and coordinates small-scale recruitment in border towns.",
+    "imageUrl": "https://ibb.co/fdhqShSK"
+  },
+  {
+    "name": "Jamal Al-Masri",
+    "organization": "Stone River Syndicate",
+    "attacksCount": 2,
+    "status": "quiet",
+    "relationToIsraelSummary": "Low-level associate; limited involvement and minimal operational knowledge.",
+    "imageUrl": "https://ibb.co/ZpFW49KZ"
+  },
+  {
+    "name": "Khaled Hamdan",
+    "organization": "Iron Horizon Cell",
+    "attacksCount": 4,
+    "status": "quiet",
+    "relationToIsraelSummary": "Keeps a low profile; previously served as a lookout and messenger.",
+    "imageUrl": "https://ibb.co/Gft5dN16"
+  },
+  {
+    "name": "Raed Abu-Zeid",
+    "organization": "Grey Lantern Circle",
+    "attacksCount": 21,
+    "status": "active",
+    "relationToIsraelSummary": "Coordinates multiple intermediaries and pushes for aggressive action.",
+    "imageUrl": "https://ibb.co/CKScNZsy"
+  },
+  {
+    "name": "Mahmoud Qutb",
+    "organization": "Desert Echo Group",
+    "attacksCount": 12,
+    "status": "active",
+    "relationToIsraelSummary": "Supports recruitment and financial transfers through informal networks.",
+    "imageUrl": null
+  },
+  {
+    "name": "Yousef Barakat",
+    "organization": "Desert Echo Group",
+    "attacksCount": 3,
+    "status": "agent",
+    "relationToIsraelSummary": "Provides limited intelligence; maintains cover inside the organization.",
+    "imageUrl": "https://ibb.co/C5cCLSPC"
+  },
+  {
+    "name": "Sami Naim",
+    "organization": "Sunset Route",
+    "attacksCount": 6,
+    "status": "quiet",
+    "relationToIsraelSummary": "Focuses on communications support; tries to avoid direct exposure.",
+    "imageUrl": "https://ibb.co/qM4wG5Q5"
+  },
+  {
+    "name": "Kamel Roushdi",
+    "organization": "Coastal Dawn Unit",
+    "attacksCount": 25,
+    "status": "active",
+    "relationToIsraelSummary": "High coordination capacity; manages multiple safe locations and couriers.",
+    "imageUrl": null
+  },
+  {
+    "name": "Bilal Shukri",
+    "organization": "Falcon Ridge",
+    "attacksCount": 16,
+    "status": "active",
+    "relationToIsraelSummary": "Handles procurement and arranges secure meetups using rotating locations.",
+    "imageUrl": "https://ibb.co/j90f1xR8"
+  },
+  {
+    "name": "Marwan Salameh",
+    "organization": "Iron Horizon Cell",
+    "attacksCount": 20,
+    "status": "active",
+    "relationToIsraelSummary": "Coordinates planning across small teams and uses rotating communication channels.",
+    "imageUrl": null
+  },
+  {
+    "name": "Suhail Rashed",
+    "organization": "Coastal Dawn Unit",
+    "attacksCount": 15,
+    "status": "active",
+    "relationToIsraelSummary": "Controls funding routes and communicates via trusted couriers.",
+    "imageUrl": "https://ibb.co/rKTdHJcV"
+  },
+  {
+    "name": "Hassan Darwish",
+    "organization": "Black Cedar Brigade",
+    "attacksCount": 18,
+    "status": "active",
+    "relationToIsraelSummary": "Coordinates training sessions and handles encrypted communications.",
+    "imageUrl": "https://ibb.co/P0p3gKy"
+  },
+  {
+    "name": "Fares Dib",
+    "organization": "Night Banner Network",
+    "attacksCount": 7,
+    "status": "quiet",
+    "relationToIsraelSummary": "Previously handled meeting logistics; now avoids contact and stays dormant.",
+    "imageUrl": null
+  },
+  {
+    "name": "Munir Haddad",
+    "organization": "Desert Echo Group",
+    "attacksCount": 5,
+    "status": "dead",
+    "relationToIsraelSummary": "Former logistics helper; no longer active due to confirmed death.",
+    "imageUrl": "https://ibb.co/y92BsNk"
+  },
+  {
+    "name": "Nabil Sayegh",
+    "organization": "Northern Fuse",
+    "attacksCount": 9,
+    "status": "quiet",
+    "relationToIsraelSummary": "Former planner; currently inactive but maintains a small contact network.",
+    "imageUrl": "https://ibb.co/9d5qD8m"
+  },
+  {
+    "name": "Tariq Abu-Salem",
+    "organization": "Grey Lantern Circle",
+    "attacksCount": 11,
+    "status": "active",
+    "relationToIsraelSummary": "Recruits online and attempts to influence local communities through intimidation.",
+    "imageUrl": "https://ibb.co/7tw734mY"
+  },
+  {
+    "name": "Adel Zahran",
+    "organization": "East Gate Collective",
+    "attacksCount": 7,
+    "status": "quiet",
+    "relationToIsraelSummary": "Maintains dormant contacts; focuses on fundraising and safe-house support.",
+    "imageUrl": "https://ibb.co/jP9LCnsr"
+  },
+  {
+    "name": "Salah Merhi",
+    "organization": "Falcon Ridge",
+    "attacksCount": 11,
+    "status": "active",
+    "relationToIsraelSummary": "Handles recruitment channels and coordinates discreet meetups.",
+    "imageUrl": null
+  },
+  {
+    "name": "Omar Qassem",
+    "organization": "Night Banner Network",
+    "attacksCount": 22,
+    "status": "active",
+    "relationToIsraelSummary": "Publicly calls for escalation and funds covert operations via intermediaries.",
+    "imageUrl": "https://ibb.co/YFFsk27n"
+  },
+  {
+    "name": "Fadi Mansour",
+    "organization": "Coastal Dawn Unit",
+    "attacksCount": 27,
+    "status": "active",
+    "relationToIsraelSummary": "Known for operational leadership and aggressive public messaging.",
+    "imageUrl": "https://ibb.co/rS5C7F1"
+  },
+  {
+    "name": "Hisham Saadi",
+    "organization": "Red Crescent Front",
+    "attacksCount": 4,
+    "status": "quiet",
+    "relationToIsraelSummary": "Low profile supporter; helps with storage and basic transport.",
+    "imageUrl": "https://ibb.co/LTVCh60"
+  },
+  {
+    "name": "Qasem Shalash",
+    "organization": "Hidden Compass",
+    "attacksCount": 1,
+    "status": "agent",
+    "relationToIsraelSummary": "Maintains cover while quietly relaying information about movements.",
+    "imageUrl": "https://ibb.co/V0tYv7Sz"
+  },
+  {
+    "name": "Ibrahim Qarawi",
+    "organization": "Falcon Ridge",
+    "attacksCount": 17,
+    "status": "active",
+    "relationToIsraelSummary": "Handles recruitment funnels and moves resources between safe locations.",
+    "imageUrl": "https://ibb.co/v4GqFsDJ"
+  },
+  {
+    "name": "Yahya Nasser",
+    "organization": "Grey Lantern Circle",
+    "attacksCount": 18,
+    "status": "active",
+    "relationToIsraelSummary": "Attempts to expand influence and coordinate intimidation campaigns.",
+    "imageUrl": null
+  },
+  {
+    "name": "Ziad Farraj",
+    "organization": "Shadow Orchard",
+    "attacksCount": 12,
+    "status": "active",
+    "relationToIsraelSummary": "Specializes in coordination and logistics across multiple regions.",
+    "imageUrl": "https://ibb.co/W4LtfV9P"
+  },
+  {
+    "name": "Rami Khatib",
+    "organization": "Stone River Syndicate",
+    "attacksCount": 2,
+    "status": "quiet",
+    "relationToIsraelSummary": "Minor courier role; avoids attention and keeps minimal digital footprint.",
+    "imageUrl": "https://ibb.co/zWhZKRWP"
+  },
+  {
+    "name": "Ammar Jaber",
+    "organization": "Night Banner Network",
+    "attacksCount": 19,
+    "status": "active",
+    "relationToIsraelSummary": "Supports planning and coordinates encrypted drop points for materials.",
+    "imageUrl": "https://ibb.co/r2J4CQXM"
   }
 ]
+
+
