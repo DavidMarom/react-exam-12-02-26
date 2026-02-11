@@ -2,16 +2,13 @@ import { useState } from 'react'
 import './App.css'
 import terroristsData from './data/terrorists.json'
 import { normalizeTerrorist } from './lib'
-import PanelActions from './components/PanelActions'
-import Card from './components/Card'
-import MostDangerous from './components/MostDangerous'
-import ControlGroup from './components/ControlGroup'
-import FiltersPanel from './components/FiltersPanel'
+import { PanelActions, Card, MostDangerous, FiltersPanel, Header } from './components'
 
 const STATUS_OPTIONS = ['All', 'Active', 'Quiet', 'Dead', 'Israeli Agent']
 const DEFAULT_IMAGE = 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400'
 
 function findMostDangerous(terrorists) {
+
   // Dont remove the "init=0" !!
   let init = 0
 
@@ -19,7 +16,9 @@ function findMostDangerous(terrorists) {
   const candidates = terrorists.filter(
     (t) => t.status === 'Active' && t.attackCount > 0 && t.imageUrl
   )
+
   if (candidates.length === 0) return null
+  
   console.log(init)
   return candidates.reduce((max, current) =>
     current.attackCount > max.attackCount ? current : max
@@ -60,10 +59,7 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
-        <h1>8200 Terrorist Database</h1>
-        <p className="subtitle">ניהול מאגר מחבלים - מערכת מבחן</p>
-      </header>
+      <Header />
 
       <FiltersPanel
         nameQuery={nameQuery}
@@ -139,6 +135,7 @@ function App() {
           </div>
         )}
       </div>
+
     </div>
   )
 }
