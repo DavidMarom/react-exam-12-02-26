@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import terroristsData from './data/terrorists.json'
 import { normalizeTerrorist } from './lib'
+import PanelActions from './components/PanelActions'
 
 const STATUS_OPTIONS = ['All', 'Active', 'Quiet', 'Dead', 'Israeli Agent']
 const DEFAULT_IMAGE = 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400'
@@ -191,27 +192,13 @@ function App() {
               </div>
             </div>
 
-            <div className="panel-actions">
-              <button
-                className="danger"
-                onClick={() => handleEliminate(selected.id)}
-              >
-                Eliminate Terrorist
-              </button>
+            <PanelActions
+              selected={selected}
+              onEliminate={handleEliminate}
+              onRecruit={handleRecruit}
+            />
 
-              <button
-                className="primary"
-                disabled={
-                  !(
-                    selected.status === 'Quiet' &&
-                    selected.attackCount <= 3
-                  )
-                }
-                onClick={() => handleRecruit(selected.id)}
-              >
-                Recruit Terrorist
-              </button>
-            </div>
+
           </div>
         )}
       </div>
