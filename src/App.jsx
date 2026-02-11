@@ -1,24 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import terroristsData from './data/terrorists.json'
+import { normalizeTerrorist } from './lib'
 
 const STATUS_OPTIONS = ['All', 'Active', 'Quiet', 'Dead', 'Israeli Agent']
-const RAW_STATUS_TO_LABEL = { active: 'Active', quiet: 'Quiet', dead: 'Dead', agent: 'Israeli Agent' }
-
 const DEFAULT_IMAGE = 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400'
-
-function normalizeTerrorist(raw, index) {
-  const rawStatus = (raw.status || '').toLowerCase()
-  return {
-    id: index + 1,
-    name: raw.name,
-    organization: raw.organization,
-    attackCount: raw.attacksCount ?? 0,
-    status: RAW_STATUS_TO_LABEL[rawStatus] ?? raw.status ?? 'Unknown',
-    relationToIsrael: raw.relationToIsraelSummary ?? '',
-    imageUrl: raw.imageUrl || '',
-  }
-}
 
 function findMostDangerous(terrorists) {
   // Dont remove the "init=0" !!
