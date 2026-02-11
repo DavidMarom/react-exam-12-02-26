@@ -18,7 +18,7 @@ function findMostDangerous(terrorists) {
   )
 
   if (candidates.length === 0) return null
-  
+
   console.log(init)
   return candidates.reduce((max, current) =>
     current.attackCount > max.attackCount ? current : max
@@ -60,17 +60,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-
-      <FiltersPanel
-        nameQuery={nameQuery}
-        minAttacks={minAttacks}
-        statusFilter={statusFilter}
-        onNameChange={setNameQuery}
-        onMinAttacksChange={setMinAttacks}
-        onStatusFilterChange={setStatusFilter}
-        statusOptions={STATUS_OPTIONS}
-      />
-
+      <FiltersPanel nameQuery={nameQuery} minAttacks={minAttacks} statusFilter={statusFilter} onNameChange={setNameQuery} onMinAttacksChange={setMinAttacks} onStatusFilterChange={setStatusFilter} statusOptions={STATUS_OPTIONS} />
       <MostDangerous mostDangerous={mostDangerous} onSelect={setSelected} defaultImage={DEFAULT_IMAGE} />
 
       <section className="list-section">
@@ -113,24 +103,17 @@ function App() {
 
               <div>
                 <label>Choose weapon (UI only)</label>
-                <select
-                  value={selectedWeapon}
-                  onChange={(e) => setSelectedWeapon(e.target.value)}
-                >
+                <select value={selectedWeapon} onChange={(e) => setSelectedWeapon(e.target.value)}>
                   <option value="">Select weapon</option>
                   <option value="drone">Drone Strike</option>
                   <option value="cyber">Cyber Operation</option>
                   <option value="ground">Ground Unit</option>
                 </select>
+
               </div>
             </div>
 
-            <PanelActions
-              selected={selected}
-              onEliminate={handleEliminate}
-              onRecruit={handleRecruit}
-            />
-
+            <PanelActions selected={selected} onEliminate={handleEliminate} onRecruit={handleRecruit} />
 
           </div>
         )}
