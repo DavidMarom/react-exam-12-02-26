@@ -58,10 +58,6 @@
   font-size: 0.95rem;
   outline: none;
   background: #ffffff;
-  transition:
-    border-color 160ms ease,
-    box-shadow 160ms ease,
-    transform 120ms ease;
 }
 
 .control-group input:focus,
@@ -101,8 +97,7 @@
   min-height: 260px;
   transform-origin: center;
   transform: translateY(0) scale(1);
-  opacity: 0;
-  animation: card-in 300ms ease-out forwards;
+  opacity: 1;
 }
 
 .terrorist-card:hover {
@@ -124,7 +119,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 220ms ease-out;
 }
 
 .terrorist-card:hover img {
@@ -190,7 +184,6 @@
   border-radius: 1.5rem 1.5rem 0 0;
   padding: 1.25rem 1.5rem 1.4rem;
   transform: translateY(0);
-  transition: bottom 260ms ease-out;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -258,14 +251,9 @@
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  transition:
-    transform 120ms ease,
-    box-shadow 160ms ease,
-    opacity 120ms ease;
 }
 
 .panel-actions button:hover:not(:disabled) {
-  transform: translateY(-1px);
 }
 
 .panel-actions .danger {
@@ -293,17 +281,6 @@
   color: #9ca3af;
   font-size: 1.5rem;
   cursor: pointer;
-}
-
-@keyframes card-in {
-  from {
-    opacity: 0;
-    transform: translateY(8px) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
 }
 
 @media (max-width: 640px) {
