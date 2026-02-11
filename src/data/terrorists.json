@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Abu Ghost",
+    "organization": "Shadow Brigade",
+    "attackCount": 18,
+    "status": "Active",
+    "relationToIsrael": "Planned multiple rocket attacks on Israeli border towns.",
+    "imageUrl": "https://images.pexels.com/photos/1487951/pexels-photo-1487951.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Layla Night",
+    "organization": "Desert Hawks",
+    "attackCount": 3,
+    "status": "Quiet",
+    "relationToIsrael": "Involved in logistics for attacks in the past, currently under observation.",
+    "imageUrl": ""
+  },
+  {
+    "id": 3,
+    "name": "Red Falcon",
+    "organization": "Red Falcon Cell",
+    "attackCount": 25,
+    "status": "Active",
+    "relationToIsrael": "Responsible for major coordinated attacks on Israeli infrastructure.",
+    "imageUrl": "https://images.pexels.com/photos/838413/pexels-photo-838413.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Silent Wave",
+    "organization": "Coastal Front",
+    "attackCount": 0,
+    "status": "Israeli Agent",
+    "relationToIsrael": "Turned and currently provides intelligence to Israel.",
+    "imageUrl": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Old Lion",
+    "organization": "Mountain Wolves",
+    "attackCount": 12,
+    "status": "Dead",
+    "relationToIsrael": "Former leader, neutralized in an IDF operation.",
+    "imageUrl": ""
+  },
+  {
+    "id": 6,
+    "name": "Desert Fox",
+    "organization": "Desert Hawks",
+    "attackCount": 2,
+    "status": "Quiet",
+    "relationToIsrael": "Participated in small arms smuggling; inactive recently.",
+    "imageUrl": "https://images.pexels.com/photos/2955376/pexels-photo-2955376.jpeg"
+  }
+]
