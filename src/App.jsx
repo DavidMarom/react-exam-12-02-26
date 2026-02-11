@@ -3,6 +3,7 @@ import './App.css'
 import terroristsData from './data/terrorists.json'
 import { normalizeTerrorist } from './lib'
 import PanelActions from './components/PanelActions'
+import Card from './components/Card'
 
 const STATUS_OPTIONS = ['All', 'Active', 'Quiet', 'Dead', 'Israeli Agent']
 const DEFAULT_IMAGE = 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400'
@@ -127,25 +128,14 @@ function App() {
       <section className="list-section">
         <h2>All Terrorists ({filtered.length})</h2>
         <div className="cards-grid">
-          
           {filtered.map((t) => (
-
-            <article
+            <Card
               key={t.id}
-              className={`terrorist-card ${mostDangerous && t.id === mostDangerous.id ? 'highlight' : ''}`}
-              onClick={() => setSelected(t)}
-            >
-              <div className="image-wrapper">
-                <img src={t.imageUrl || DEFAULT_IMAGE} alt={t.name} />
-              </div>
-              <div className="card-content">
-                <h3>{t.name}</h3>
-                <p className="organization">{t.organization}</p>
-                <p className="status">Status: {t.status}</p>
-                <p className="attacks">Attacks: {t.attackCount}</p>
-                <p className="relation">{t.relationToIsrael}</p>
-              </div>
-            </article>
+              terrorist={t}
+              isHighlighted={mostDangerous && t.id === mostDangerous.id}
+              onSelect={() => setSelected(t)}
+              defaultImage={DEFAULT_IMAGE}
+            />
           ))}
         </div>
 
