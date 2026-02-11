@@ -127,11 +127,12 @@ function App() {
       <section className="list-section">
         <h2>All Terrorists ({filtered.length})</h2>
         <div className="cards-grid">
+          
           {filtered.map((t) => (
+
             <article
               key={t.id}
-              className={`terrorist-card ${mostDangerous && t.id === mostDangerous.id ? 'highlight' : ''
-                }`}
+              className={`terrorist-card ${mostDangerous && t.id === mostDangerous.id ? 'highlight' : ''}`}
               onClick={() => setSelected(t)}
             >
               <div className="image-wrapper">
@@ -147,9 +148,9 @@ function App() {
             </article>
           ))}
         </div>
-        {filtered.length === 0 && (
-          <p className="empty-state">No terrorists match the current filters.</p>
-        )}
+
+        {filtered.length === 0 && (<p className="empty-state">No terrorists match the current filters.</p>)}
+
       </section>
 
       {/* Bonus bottom panel */}
