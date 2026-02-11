@@ -4,6 +4,7 @@ import terroristsData from './data/terrorists.json'
 import { normalizeTerrorist } from './lib'
 import PanelActions from './components/PanelActions'
 import Card from './components/Card'
+import MostDangerous from './components/MostDangerous'
 
 const STATUS_OPTIONS = ['All', 'Active', 'Quiet', 'Dead', 'Israeli Agent']
 const DEFAULT_IMAGE = 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400'
@@ -101,41 +102,13 @@ function App() {
         </div>
       </section>
 
-      {mostDangerous && (
-        <section className="most-dangerous">
-          <h2>Most Dangerous Terrorist</h2>
-          <div
-            className="terrorist-card most-dangerous-card"
-            onClick={() => setSelected(mostDangerous)}
-          >
-            <div className="image-wrapper">
-              <img
-                src={mostDangerous.imageUrl || DEFAULT_IMAGE}
-                alt={mostDangerous.name}
-              />
-              <span className="badge">Most Dangerous</span>
-            </div>
-            <div className="card-content">
-              <h3>{mostDangerous.name}</h3>
-              <p className="organization">{mostDangerous.organization}</p>
-              <p className="status">Status: {mostDangerous.status}</p>
-              <p className="attacks">Attacks: {mostDangerous.attackCount}</p>
-            </div>
-          </div>
-        </section>
-      )}
+      <MostDangerous mostDangerous={mostDangerous} onSelect={setSelected} defaultImage={DEFAULT_IMAGE} />
 
       <section className="list-section">
         <h2>All Terrorists ({filtered.length})</h2>
         <div className="cards-grid">
           {filtered.map((t) => (
-            <Card
-              key={t.id}
-              terrorist={t}
-              isHighlighted={mostDangerous && t.id === mostDangerous.id}
-              onSelect={() => setSelected(t)}
-              defaultImage={DEFAULT_IMAGE}
-            />
+            <Card key={t.id} terrorist={t} isHighlighted={mostDangerous && t.id === mostDangerous.id} onSelect={() => setSelected(t)} defaultImage={DEFAULT_IMAGE} />
           ))}
         </div>
 
