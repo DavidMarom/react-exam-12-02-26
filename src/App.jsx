@@ -5,6 +5,8 @@ import { normalizeTerrorist } from './lib'
 import PanelActions from './components/PanelActions'
 import Card from './components/Card'
 import MostDangerous from './components/MostDangerous'
+import ControlGroup from './components/ControlGroup'
+import FiltersPanel from './components/FiltersPanel'
 
 const STATUS_OPTIONS = ['All', 'Active', 'Quiet', 'Dead', 'Israeli Agent']
 const DEFAULT_IMAGE = 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400'
@@ -63,44 +65,15 @@ function App() {
         <p className="subtitle">ניהול מאגר מחבלים - מערכת מבחן</p>
       </header>
 
-      <section className="controls">
-        <div className="control-group">
-          <label htmlFor="nameSearch">Search by name</label>
-          <input
-            id="nameSearch"
-            type="text"
-            placeholder="Type a name..."
-            value={nameQuery}
-            onChange={(e) => setNameQuery(e.target.value)}
-          />
-        </div>
-
-        <div className="control-group">
-          <label htmlFor="minAttacks">Min. number of attacks</label>
-          <input
-            id="minAttacks"
-            type="number"
-            min="0"
-            value={minAttacks}
-            onChange={(e) => setMinAttacks(e.target.value)}
-          />
-        </div>
-
-        <div className="control-group">
-          <label htmlFor="statusFilter">Filter by status</label>
-          <select
-            id="statusFilter"
-            value={statusFilter}
-            onChange={(e) => setStatusFilter(e.target.value)}
-          >
-            {STATUS_OPTIONS.map((status) => (
-              <option key={status} value={status}>
-                {status}
-              </option>
-            ))}
-          </select>
-        </div>
-      </section>
+      <FiltersPanel
+        nameQuery={nameQuery}
+        minAttacks={minAttacks}
+        statusFilter={statusFilter}
+        onNameChange={setNameQuery}
+        onMinAttacksChange={setMinAttacks}
+        onStatusFilterChange={setStatusFilter}
+        statusOptions={STATUS_OPTIONS}
+      />
 
       <MostDangerous mostDangerous={mostDangerous} onSelect={setSelected} defaultImage={DEFAULT_IMAGE} />
 
